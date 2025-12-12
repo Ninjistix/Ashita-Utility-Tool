@@ -6,71 +6,92 @@ A Python-based GUI tool for managing Ashita configurations and launching Ashita 
 
 ## Features
 
-- Load, edit, and save Ashita configuration files (`.ini`)
-- Organize settings into logical tab groups (e.g., General, Input & Controls, Plugins)
-- Save last used configuration automatically
-- Launch Ashita directly from the GUI with current settings
-- Edit server IP, login credentials, console hiding, and other options
-- Visual indicator for unsaved changes
-- Customizable window layout and tab organization
+* Load, edit, and save Ashita configuration files (`.ini`)
+* Organize settings into logical tab groups (e.g., General, Input & Controls, Plugins)
+* Save last used configuration automatically
+* Launch Ashita directly from the GUI with current settings
+* Edit server IP, login credentials, console hiding, and other options
+* Visual indicator for unsaved changes
+* Customizable window layout and tab organization
 
 ---
 
 ## Screenshots
 
-*(Screenshot of the GUI window)*
-<img width="951" height="680" alt="image" src="https://github.com/user-attachments/assets/00536ce0-b4c9-464a-96c1-b0ae610c8005" />
-
+*(Screenshot of the GUI window)* <img width="951" height="680" alt="image" src="https://github.com/user-attachments/assets/00536ce0-b4c9-464a-96c1-b0ae610c8005" />
 
 ---
 
 ## Requirements
 
-- Python 3.x (tested on Python 3.8+)
-- `tkinter` (usually bundled with Python)
-- `configparser` (standard library)
-- `ctypes` (standard library)
+If using the **Python script** version:
+
+* Python 3.x (tested on Python 3.8+)
+* `tkinter` (bundled with most Python installs)
+* `configparser` (standard library)
+* `ctypes` (standard library)
+
+If using the **EXE version**:
+
+* No dependencies — just run the file.
+
+---
 
 ## Setup Instructions
 
-1. **Place `AshitaConfigLauncher.pyw` in the same folder as your `ashita-cli.exe`.**
+You may use **either** the Python script (`AshitaConfigLauncher.pyw`) **or** the standalone executable (`AshitaConfigLauncher.exe`). Both work the same way.
 
-2. **Ensure `ashita-cli.exe` is in the same directory as the launcher script.**
+### 1. Place the launcher in your Ashita folder
 
-3. **Run the launcher:**
+Put **`AshitaConfigLauncher.pyw`** **or** **`AshitaConfigLauncher.exe`** in the **same directory** as:
 
-   - Double-click `AshitaConfigLauncher.pyw` or run it from the command line:
+* `ashita-cli.exe`
+* Any Ashita `.ini` configuration files you want to manage (optional)
 
-     ```bash
-     pythonw AshitaConfigLauncher.pyw
-     ```
+> **Important:** The launcher *must* be in the same folder as `ashita-cli.exe`.
+> If they are separated, Ashita will not launch.
 
-4. **Configure your settings, load your `.ini` config, and launch Ashita.**
+---
+
+### 2. Run the launcher
+
+#### **Using the EXE (recommended):**
+
+Double-click:
+
+```
+AshitaConfigLauncher.exe
+```
+
+No Python installation is required.
+
+#### **Using the Python script:**
+
+```bash
+pythonw AshitaConfigLauncher.pyw
+```
 
 ---
 
 ## Usage
 
-- Click **Load Config** to select an existing Ashita `.ini` config file.
-- Edit settings across the tabs (e.g., server IP, login, plugins).
-- Save your changes with **Save Config** or **Save As**.
-- Launch Ashita with the current config by clicking **Launch Ashita**.
-- The launcher will remember your last used configuration for convenience.
+* Click **Load Config** to select an Ashita `.ini` file.
+* Edit settings across the various configuration tabs.
+* Save your edits using **Save Config** or **Save As**.
+* Click **Launch Ashita** to run `ashita-cli.exe` using the current settings.
+* The launcher remembers the last configuration you used for convenience.
 
 ---
 
 ## Customization & Extending
 
-- Modify `TAB_GROUPS` dictionary to reorganize tabs.
-- Add or remove settings sections in your `.ini` files.
-- Extend the GUI with new controls or features as needed.
+* Modify the `TAB_GROUPS` dictionary in the source code to reorganize tab structure.
+* Add new configuration sections or extend existing ones in your `.ini` files.
+* Enhance the GUI with extra features or plugin management tools.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Would you like me to generate a sample folder structure or help create an icon or other assets?
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
